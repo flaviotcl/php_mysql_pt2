@@ -4,6 +4,7 @@
 $conn = require __DIR__.'/../conection.php';
 
 $term = $argv[1] ?? null;
+$term = '%'.$term.'%';
 
 $stmt = $conn->prepare('SELECT * from posts WHERE title LIKE ?');
 
